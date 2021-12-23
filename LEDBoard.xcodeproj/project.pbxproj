@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE3FDE592774329000A77ED4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3FDE582774329000A77ED4 /* SettingsViewController.swift */; };
 		DE5C7D93277402B90033C44D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5C7D92277402B90033C44D /* AppDelegate.swift */; };
 		DE5C7D95277402B90033C44D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5C7D94277402B90033C44D /* SceneDelegate.swift */; };
 		DE5C7D97277402B90033C44D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5C7D96277402B90033C44D /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE3FDE582774329000A77ED4 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		DE5C7D8F277402B90033C44D /* LEDBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LEDBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE5C7D92277402B90033C44D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE5C7D94277402B90033C44D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				DE5C7D92277402B90033C44D /* AppDelegate.swift */,
 				DE5C7D94277402B90033C44D /* SceneDelegate.swift */,
 				DE5C7D96277402B90033C44D /* ViewController.swift */,
+				DE3FDE582774329000A77ED4 /* SettingsViewController.swift */,
 				DE5C7D98277402B90033C44D /* Main.storyboard */,
 				DE5C7D9B277402BA0033C44D /* Assets.xcassets */,
 				DE5C7D9D277402BA0033C44D /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				DE5C7D97277402B90033C44D /* ViewController.swift in Sources */,
 				DE5C7D93277402B90033C44D /* AppDelegate.swift in Sources */,
 				DE5C7D95277402B90033C44D /* SceneDelegate.swift in Sources */,
+				DE3FDE592774329000A77ED4 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
