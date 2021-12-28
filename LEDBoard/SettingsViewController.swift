@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol LEDBaordSettingDelegate: AnyObject{
+    func changedSetting(text: String?, textColor: UIColor, backgroundColor: UIColor)
+}
+
 class SettingsViewController: UIViewController {
 
     @IBOutlet weak var textField: UITextField!
@@ -17,10 +21,22 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var blackBtn: UIButton!
     @IBOutlet weak var greenBtn: UIButton!
     
+    weak var delegate: LEDBaordSettingDelegate?
+    var ledText: String?
+    var textColor: UIColor = .yellow
+    var backgroundColor:UIColor = .black
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        configueView()
+    }
+    private func configueView(){
+        if let ledText = ledText {
+            textField.text = ledText
+        }
+        changeTextColor(color: textColor)
+        changeBackgroundColor(color: backgroundColor)
     }
     
     private func changeTextColor(color: UIColor){
@@ -38,24 +54,34 @@ class SettingsViewController: UIViewController {
     @IBAction func tapTextColorBtn(_ sender: UIButton) {
         if sender == yellowbtn {
             changeTextColor(color: .yellow)
+            textColor = .yellow
         }else if sender == purplebtn {
             changeTextColor(color: .purple)
+            textColor = .purple
         }else if sender == greenBtn {
             changeTextColor(color: .green)
+            textColor = .green
         }
     }
     
     @IBAction func tapBackgroundColorBtn(_ sender: UIButton) {
         if sender == blackBtn {
             changeBackgroundColor(color: .black)
+            backgroundColor = .black
         }else if sender == blueBtn {
             changeBackgroundColor(color: .blue)
+            backgroundColor = .blue
         }else if sender == orangeBtn {
             changeBackgroundColor(color: .orange)
+            backgroundColor = .orange
         }
     }
     
-    @IBAction func tabSaveBtn(_ sender: Any) {
+    @IBAction func tabSaveBtn(_ sender: UIButton) {
+        delegate?.changedSetting(text: textField.text!,
+                                 textColor: textColor,
+                                 backgroundColor: backgroundColor)
+        navigationController?.popViewController(animated: true)
     }
     
     
