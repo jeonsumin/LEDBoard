@@ -7,6 +7,7 @@
 
 import UIKit
 
+//프로토콜 델리게이트를 통해 View 간 데이터 전달하기
 protocol LEDBaordSettingDelegate: AnyObject{
     func changedSetting(text: String?, textColor: UIColor, backgroundColor: UIColor)
 }
@@ -21,6 +22,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var blackBtn: UIButton!
     @IBOutlet weak var greenBtn: UIButton!
     
+    // 데이터를 전달하기 위한 view에서 delegate 선언
     weak var delegate: LEDBaordSettingDelegate?
     var ledText: String?
     var textColor: UIColor = .yellow
@@ -78,6 +80,7 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func tabSaveBtn(_ sender: UIButton) {
+        //Action에서 Delegate 데이터 담기
         delegate?.changedSetting(text: textField.text!,
                                  textColor: textColor,
                                  backgroundColor: backgroundColor)

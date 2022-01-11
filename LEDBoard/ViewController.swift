@@ -7,6 +7,7 @@
 
 import UIKit
 
+                                        //데이터를 받을 View에서 Delegate를 채택 
 class ViewController: UIViewController ,LEDBaordSettingDelegate {
     
     
@@ -27,6 +28,7 @@ class ViewController: UIViewController ,LEDBaordSettingDelegate {
         }
     }
     
+    //delegate 채택 후 필수 메소드 구현
     func changedSetting(text: String?, textColor: UIColor, backgroundColor: UIColor) {
         if let text = text {
             contentsLb.text = text
